@@ -15,7 +15,7 @@ function fish_prompt
 		set_color cyan
 		printf '%s' (basename "$PWD")
 		set_color brblue
-		fish_git_prompt
+		fish_vcs_prompt
 		set_color brred
 		printf ' ~# '
 		set_color normal
@@ -23,7 +23,7 @@ function fish_prompt
 		set_color cyan
 		printf '%s' (basename "$PWD")
 		set_color brblue
-		fish_git_prompt
+		fish_vcs_prompt
 		set_color bryellow
 		printf ' ~> '
 		set_color normal
