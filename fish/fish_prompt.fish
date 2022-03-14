@@ -12,8 +12,20 @@ function fish_prompt
 	end
 		
 	if test "$USER" = 'root'
-		echo (set_color cyan)(basename "$PWD")(set_color brred)' ''~# '(set_color normal)
+		set_color cyan
+		printf '%s' (basename "$PWD")
+		set_color brblue
+		fish_git_prompt
+		set_color brred
+		printf ' ~# '
+		set_color normal
 	else
-		echo (set_color cyan)(basename "$PWD")(set_color bryellow)' ''~> '(set_color normal)
+		set_color cyan
+		printf '%s' (basename "$PWD")
+		set_color brblue
+		fish_git_prompt
+		set_color bryellow
+		printf ' ~> '
+		set_color normal
 	end
 end
